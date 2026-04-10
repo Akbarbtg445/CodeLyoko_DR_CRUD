@@ -10,10 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Linq.Expressions;
+using System.Diagnostics.Eventing.Reader;
 
 namespace CRUDMahasiswaADO
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         private readonly SqlConnection conn;
         private readonly string coonnectionString =
@@ -33,7 +34,7 @@ namespace CRUDMahasiswaADO
                 }
                 MessageBox.Show("Koneksi berhasil");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Koneksi gagal:" + ex.Message);
             }
@@ -150,6 +151,51 @@ namespace CRUDMahasiswaADO
             {
                 MessageBox.Show("Terjadi Kesalahan:" + ex.Message);
             }
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                string query = "@Update Mahasiswa 
+                    SET Nama = @Nama,
+                    JenisKelamin = @JK,
+                    TanggalLahir = @TanggalLahir,
+                    Alamat = @Alamat,
+                    KodeProdi = @KodeProdi
+                    WHERE NIM = @NIM";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
+                cmd.Parameters.AddWithValue("@JK", cmbJK.Text);
+                cmd.Parameters.AddWithValue("@TanggalLahir", dtpTanggalLahir.Value.Date);
+                cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                cmd.Parameters.AddWithValue("@KodeProdi", txtKodeProdi.Text);
+
+                int result = cmd.ExecuteNonQuery();
+
+                if (result > 0) ;
+                {
+                    MessageBox.Show("Data berhasil dihapus");
+                    ClearForm();
+                    btnLoad.PerformClick();
+
+                }
+                else
+                {
+                    MessageBox.Show("Data tidak ditemukan");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+        MessageBox.Show("Terjadi kesalahan:" + ex.Message);
         }
     }
 }
