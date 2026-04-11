@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNIM = new System.Windows.Forms.TextBox();
@@ -43,20 +43,21 @@
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtKodeProdi = new System.Windows.Forms.TextBox();
             this.dgvMahasiswa = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMahasiswa)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnConnect
             // 
-            this.button1.Location = new System.Drawing.Point(558, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Membuka Koneksi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConnect.Location = new System.Drawing.Point(558, 60);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(211, 37);
+            this.btnConnect.TabIndex = 0;
+            this.btnConnect.Text = "Membuka Koneksi";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnLoad
             // 
@@ -66,7 +67,7 @@
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Menampilkan Data";
             this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click_1);
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // label1
             // 
@@ -179,24 +180,25 @@
             this.dgvMahasiswa.Size = new System.Drawing.Size(867, 184);
             this.dgvMahasiswa.TabIndex = 14;
             // 
-            // button3
+            // btnInsert
             // 
-            this.button3.Location = new System.Drawing.Point(558, 144);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 37);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Menambah Data";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnInsert.Location = new System.Drawing.Point(558, 144);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(211, 37);
+            this.btnInsert.TabIndex = 15;
+            this.btnInsert.Text = "Menambah Data";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // button4
+            // btnUpdate
             // 
-            this.button4.Location = new System.Drawing.Point(558, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(211, 37);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Mengubah Data";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(558, 184);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(211, 37);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Mengubah Data";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // button5
             // 
@@ -206,6 +208,7 @@
             this.button5.TabIndex = 17;
             this.button5.Text = "Menghapus Data";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
@@ -213,8 +216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 679);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.dgvMahasiswa);
             this.Controls.Add(this.txtKodeProdi);
             this.Controls.Add(this.txtAlamat);
@@ -229,7 +232,7 @@
             this.Controls.Add(this.txtNIM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConnect);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMahasiswa)).EndInit();
@@ -240,7 +243,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNIM;
@@ -255,8 +258,8 @@
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtKodeProdi;
         private System.Windows.Forms.DataGridView dgvMahasiswa;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button button5;
     }
 }

@@ -3,3 +3,8 @@ C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMaha
 C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.Properties.Resources.resources
 C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.GenerateResource.cache
 C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.CoreCompileInputs.cache
+C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.exe.config
+C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.exe
+C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.pdb
+C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.exe
+C:\Users\ADVAN\source\repos\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.pdb

@@ -265,15 +265,5 @@ namespace CRUDMahasiswaADO
             dgvMahasiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvMahasiswa.CellClick += dgvMahasiswa_CellClick;
         }
-
-        private void btnLoad_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
