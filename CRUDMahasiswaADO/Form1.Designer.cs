@@ -179,6 +179,7 @@
             this.dgvMahasiswa.RowTemplate.Height = 28;
             this.dgvMahasiswa.Size = new System.Drawing.Size(867, 184);
             this.dgvMahasiswa.TabIndex = 14;
+            this.dgvMahasiswa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMahasiswa_CellClick);
             // 
             // btnInsert
             // 
