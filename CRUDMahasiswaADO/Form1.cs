@@ -104,10 +104,10 @@ namespace CRUDMahasiswaADO
                     txtNama.Focus();
                     return;
                 }
-                if (dtpTanggalLahir.Text == "")
+                if (cmbJK.Text == "")
                 {
                     MessageBox.Show("Jenis kelamin harus dipilih");
-                    dtpTanggalLahir.Focus();
+                    cmbJK.Focus();
                     return;
                 }
                 if (txtKodeProdi.Text == "")
@@ -161,15 +161,15 @@ namespace CRUDMahasiswaADO
                     conn.Open();
                 }
 
-                string query = "@Update Mahasiswa 
-                    SET Nama = @Nama,
-                    JenisKelamin = @JK,
-                    TanggalLahir = @TanggalLahir,
-                    Alamat = @Alamat,
-                    KodeProdi = @KodeProdi
-                    WHERE NIM = @NIM";
+                string query = @"UPDATE Mahasiswa 
+                SET Nama = @Nama,
+                JenisKelamin = @JK,
+                TanggalLahir = @TanggalLahir,
+                Alamat = @Alamat,
+                KodeProdi = @KodeProdi
+                WHERE NIM = @NIM";
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
                 cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
@@ -180,7 +180,7 @@ namespace CRUDMahasiswaADO
 
                 int result = cmd.ExecuteNonQuery();
 
-                if (result > 0) ;
+                if (result > 0) 
                 {
                     MessageBox.Show("Data berhasil dihapus");
                     ClearForm();
@@ -192,11 +192,12 @@ namespace CRUDMahasiswaADO
                     MessageBox.Show("Data tidak ditemukan");
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan:" + ex.Message);
+            }
         }
-        catch (Exception ex)
-        {
-        MessageBox.Show("Terjadi kesalahan:" + ex.Message);
-        }
+     
        private void btnDelete_Click(object sender, EventArgs e)
         {
             try
