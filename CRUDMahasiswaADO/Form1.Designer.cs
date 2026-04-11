@@ -66,6 +66,7 @@
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Menampilkan Data";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click_1);
             // 
             // label1
             // 
@@ -82,7 +83,6 @@
             this.txtNIM.Name = "txtNIM";
             this.txtNIM.Size = new System.Drawing.Size(303, 26);
             this.txtNIM.TabIndex = 3;
-            this.txtNIM.Text = "txtNIM";
             // 
             // txtNama
             // 
@@ -90,7 +90,6 @@
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(303, 26);
             this.txtNama.TabIndex = 4;
-            this.txtNama.Text = "txtNAMA";
             // 
             // label2
             // 
@@ -147,7 +146,6 @@
             this.cmbJK.Name = "cmbJK";
             this.cmbJK.Size = new System.Drawing.Size(303, 28);
             this.cmbJK.TabIndex = 10;
-            this.cmbJK.Text = "Jenis Kelamin";
             // 
             // dtpTanggalLahir
             // 
@@ -163,7 +161,6 @@
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(303, 65);
             this.txtAlamat.TabIndex = 12;
-            this.txtAlamat.Text = "txtAlamat";
             // 
             // txtKodeProdi
             // 
@@ -171,7 +168,6 @@
             this.txtKodeProdi.Name = "txtKodeProdi";
             this.txtKodeProdi.Size = new System.Drawing.Size(303, 26);
             this.txtKodeProdi.TabIndex = 13;
-            this.txtKodeProdi.Text = "txtKodeProdi";
             // 
             // dgvMahasiswa
             // 
@@ -191,6 +187,7 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "Menambah Data";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 

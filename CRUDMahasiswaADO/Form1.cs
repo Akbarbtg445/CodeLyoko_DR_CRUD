@@ -252,5 +252,27 @@ namespace CRUDMahasiswaADO
             dtpTanggalLahir.Value = DateTime.Now;
             txtNIM.Focus();        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbJK.Items.Clear();
+            cmbJK.Items.Add("L");
+            cmbJK.Items.Add("P");
+            dgvMahasiswa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMahasiswa.MultiSelect = false;
+            dgvMahasiswa.ReadOnly = true;
+            dgvMahasiswa.AllowUserToAddRows = false;
+            dgvMahasiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMahasiswa.CellClick += dgvMahasiswa_CellClick;
+        }
+
+        private void btnLoad_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
